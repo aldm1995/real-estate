@@ -61,14 +61,11 @@ export default class Header extends Component {
 					</div>
 				</div>
 				<div className="bottom-info">
-					<span>$1000/ month </span>
-					<span><i className="fas fa-map-marker"></i> San Leandro, CA </span>
+					<span className="price">$1000/ month </span>
+					<span className="location"><i className="fas fa-map-marker"></i> San Leandro, CA </span>
 				</div>
-			
 			</div>
-			
 		</section>
-
 		<section className="pagination">
 			<ul className="pagination-nums">
 				<li>Prev</li>

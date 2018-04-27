@@ -243,6 +243,23 @@
 				}
 			}
 		}
+		
+		.bottom-info {
+			padding: 20px 15px;
+			
+			.price {
+				font-size: 1rem;
+				display: block;
+				margin-bottom: 10px;
+				color: $darkgrey;
+			}
+			
+			.location {
+				font-size: 1.2rem;
+				display: block;
+				color: $lightgrey;
+			}
+		}
 	}
 }
 
