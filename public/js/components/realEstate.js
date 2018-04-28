@@ -366,11 +366,10 @@ var Header = function (_Component) {
 			return _react2.default.createElement(
 				'section',
 				{ id: 'listings' },
-				'Search here',
 				_react2.default.createElement(
 					'section',
 					{ className: 'search-area' },
-					_react2.default.createElement('input', { type: 'text', name: 'search' })
+					_react2.default.createElement('input', { type: 'text', name: 'search', placeholder: 'Search Here' })
 				),
 				_react2.default.createElement(
 					'section',
@@ -410,89 +409,369 @@ var Header = function (_Component) {
 					{ className: 'listings-results' },
 					_react2.default.createElement(
 						'div',
-						{ className: 'listing' },
+						{ className: 'col-md-3' },
 						_react2.default.createElement(
 							'div',
-							{ className: 'listing-img' },
-							_react2.default.createElement(
-								'span',
-								{ className: 'address' },
-								'Beverly Hills, CA'
-							),
+							{ className: 'listing' },
 							_react2.default.createElement(
 								'div',
-								{ className: 'details' },
+								{ className: 'listing-img' },
 								_react2.default.createElement(
-									'div',
-									{ className: 'col-md-3' },
-									_react2.default.createElement(
-										'div',
-										{ className: 'user-img' },
-										' '
-									)
+									'span',
+									{ className: 'Address' },
+									'Beverly Hills, CA '
 								),
 								_react2.default.createElement(
 									'div',
-									{ className: 'col-md-9' },
+									{ className: 'details' },
 									_react2.default.createElement(
 										'div',
-										{ className: 'user-details' },
+										{ className: 'col-md-3' },
 										_react2.default.createElement(
-											'span',
-											{ className: 'user-name' },
-											'Andrew Mukhtar'
-										),
-										_react2.default.createElement(
-											'span',
-											{ className: 'post-date' },
-											'05/05/2018'
+											'div',
+											{ className: 'user-img' },
+											' '
 										)
 									),
 									_react2.default.createElement(
 										'div',
-										{ className: 'listing-details' },
+										{ className: 'col-md-9' },
 										_react2.default.createElement(
 											'div',
-											{ className: 'floor-space' },
-											_react2.default.createElement('i', { className: 'far fa-square' }),
+											{ className: 'user-details' },
 											_react2.default.createElement(
 												'span',
-												null,
-												'1000 ft\xB2'
+												{ className: 'user-name' },
+												'Andrew Mukhtar'
+											),
+											_react2.default.createElement(
+												'span',
+												{ className: 'post-date' },
+												'05/05/2018'
 											)
 										),
 										_react2.default.createElement(
 											'div',
-											{ className: 'bedrooms' },
-											_react2.default.createElement('i', { className: 'fas fa-bed' }),
+											{ className: 'listing-details' },
 											_react2.default.createElement(
-												'span',
-												null,
-												'3 bedrooms'
+												'div',
+												{ className: 'floor-space' },
+												_react2.default.createElement('i', { className: 'far fa-square' }),
+												_react2.default.createElement(
+													'span',
+													null,
+													'1000 ft\xB2'
+												)
+											),
+											_react2.default.createElement(
+												'div',
+												{ className: 'bedrooms' },
+												_react2.default.createElement('i', { className: 'fas fa-bed' }),
+												_react2.default.createElement(
+													'span',
+													null,
+													'3 bedrooms'
+												)
 											)
+										),
+										_react2.default.createElement(
+											'div',
+											{ className: 'view-btn' },
+											'View Listing'
 										)
-									),
-									_react2.default.createElement(
-										'div',
-										{ className: 'view-btn' },
-										'View Listing'
 									)
 								)
-							)
-						),
-						_react2.default.createElement(
-							'div',
-							{ className: 'bottom-info' },
-							_react2.default.createElement(
-								'span',
-								{ className: 'price' },
-								'$1000/ month '
 							),
 							_react2.default.createElement(
-								'span',
-								{ className: 'location' },
-								_react2.default.createElement('i', { className: 'fas fa-map-marker' }),
-								' San Leandro, CA '
+								'div',
+								{ className: 'bottom-info' },
+								_react2.default.createElement(
+									'span',
+									{ className: 'price' },
+									'$1000/ month '
+								),
+								_react2.default.createElement(
+									'span',
+									{ className: 'location' },
+									_react2.default.createElement('i', { className: 'fas fa-map-marker' }),
+									' San Leandro, CA '
+								)
+							)
+						)
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'col-md-3' },
+						_react2.default.createElement(
+							'div',
+							{ className: 'listing' },
+							_react2.default.createElement(
+								'div',
+								{ className: 'listing-img' },
+								_react2.default.createElement(
+									'span',
+									{ className: 'Address' },
+									'Beverly Hills, CA '
+								),
+								_react2.default.createElement(
+									'div',
+									{ className: 'details' },
+									_react2.default.createElement(
+										'div',
+										{ className: 'col-md-3' },
+										_react2.default.createElement(
+											'div',
+											{ className: 'user-img' },
+											' '
+										)
+									),
+									_react2.default.createElement(
+										'div',
+										{ className: 'col-md-9' },
+										_react2.default.createElement(
+											'div',
+											{ className: 'user-details' },
+											_react2.default.createElement(
+												'span',
+												{ className: 'user-name' },
+												'Andrew Mukhtar'
+											),
+											_react2.default.createElement(
+												'span',
+												{ className: 'post-date' },
+												'05/05/2018'
+											)
+										),
+										_react2.default.createElement(
+											'div',
+											{ className: 'listing-details' },
+											_react2.default.createElement(
+												'div',
+												{ className: 'floor-space' },
+												_react2.default.createElement('i', { className: 'far fa-square' }),
+												_react2.default.createElement(
+													'span',
+													null,
+													'1000 ft\xB2'
+												)
+											),
+											_react2.default.createElement(
+												'div',
+												{ className: 'bedrooms' },
+												_react2.default.createElement('i', { className: 'fas fa-bed' }),
+												_react2.default.createElement(
+													'span',
+													null,
+													'3 bedrooms'
+												)
+											)
+										),
+										_react2.default.createElement(
+											'div',
+											{ className: 'view-btn' },
+											'View Listing'
+										)
+									)
+								)
+							),
+							_react2.default.createElement(
+								'div',
+								{ className: 'bottom-info' },
+								_react2.default.createElement(
+									'span',
+									{ className: 'price' },
+									'$1000/ month '
+								),
+								_react2.default.createElement(
+									'span',
+									{ className: 'location' },
+									_react2.default.createElement('i', { className: 'fas fa-map-marker' }),
+									' San Leandro, CA '
+								)
+							)
+						)
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'col-md-3' },
+						_react2.default.createElement(
+							'div',
+							{ className: 'listing' },
+							_react2.default.createElement(
+								'div',
+								{ className: 'listing-img' },
+								_react2.default.createElement(
+									'span',
+									{ className: 'Address' },
+									'Beverly Hills, CA '
+								),
+								_react2.default.createElement(
+									'div',
+									{ className: 'details' },
+									_react2.default.createElement(
+										'div',
+										{ className: 'col-md-3' },
+										_react2.default.createElement(
+											'div',
+											{ className: 'user-img' },
+											' '
+										)
+									),
+									_react2.default.createElement(
+										'div',
+										{ className: 'col-md-9' },
+										_react2.default.createElement(
+											'div',
+											{ className: 'user-details' },
+											_react2.default.createElement(
+												'span',
+												{ className: 'user-name' },
+												'Andrew Mukhtar'
+											),
+											_react2.default.createElement(
+												'span',
+												{ className: 'post-date' },
+												'05/05/2018'
+											)
+										),
+										_react2.default.createElement(
+											'div',
+											{ className: 'listing-details' },
+											_react2.default.createElement(
+												'div',
+												{ className: 'floor-space' },
+												_react2.default.createElement('i', { className: 'far fa-square' }),
+												_react2.default.createElement(
+													'span',
+													null,
+													'1000 ft\xB2'
+												)
+											),
+											_react2.default.createElement(
+												'div',
+												{ className: 'bedrooms' },
+												_react2.default.createElement('i', { className: 'fas fa-bed' }),
+												_react2.default.createElement(
+													'span',
+													null,
+													'3 bedrooms'
+												)
+											)
+										),
+										_react2.default.createElement(
+											'div',
+											{ className: 'view-btn' },
+											'View Listing'
+										)
+									)
+								)
+							),
+							_react2.default.createElement(
+								'div',
+								{ className: 'bottom-info' },
+								_react2.default.createElement(
+									'span',
+									{ className: 'price' },
+									'$1000/ month '
+								),
+								_react2.default.createElement(
+									'span',
+									{ className: 'location' },
+									_react2.default.createElement('i', { className: 'fas fa-map-marker' }),
+									' San Leandro, CA '
+								)
+							)
+						)
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'col-md-3' },
+						_react2.default.createElement(
+							'div',
+							{ className: 'listing' },
+							_react2.default.createElement(
+								'div',
+								{ className: 'listing-img' },
+								_react2.default.createElement(
+									'span',
+									{ className: 'Address' },
+									'Beverly Hills, CA'
+								),
+								_react2.default.createElement(
+									'div',
+									{ className: 'details' },
+									_react2.default.createElement(
+										'div',
+										{ className: 'col-md-3' },
+										_react2.default.createElement(
+											'div',
+											{ className: 'user-img' },
+											' '
+										)
+									),
+									_react2.default.createElement(
+										'div',
+										{ className: 'col-md-9' },
+										_react2.default.createElement(
+											'div',
+											{ className: 'user-details' },
+											_react2.default.createElement(
+												'span',
+												{ className: 'user-name' },
+												'Andrew Mukhtar'
+											),
+											_react2.default.createElement(
+												'span',
+												{ className: 'post-date' },
+												'05/05/2018'
+											)
+										),
+										_react2.default.createElement(
+											'div',
+											{ className: 'listing-details' },
+											_react2.default.createElement(
+												'div',
+												{ className: 'floor-space' },
+												_react2.default.createElement('i', { className: 'far fa-square' }),
+												_react2.default.createElement(
+													'span',
+													null,
+													'1000 ft\xB2'
+												)
+											),
+											_react2.default.createElement(
+												'div',
+												{ className: 'bedrooms' },
+												_react2.default.createElement('i', { className: 'fas fa-bed' }),
+												_react2.default.createElement(
+													'span',
+													null,
+													'3 bedrooms'
+												)
+											)
+										),
+										_react2.default.createElement(
+											'div',
+											{ className: 'view-btn' },
+											'View Listing'
+										)
+									)
+								)
+							),
+							_react2.default.createElement(
+								'div',
+								{ className: 'bottom-info' },
+								_react2.default.createElement(
+									'span',
+									{ className: 'price' },
+									'$1000/ month '
+								),
+								_react2.default.createElement(
+									'span',
+									{ className: 'location' },
+									_react2.default.createElement('i', { className: 'fas fa-map-marker' }),
+									' San Leandro, CA '
+								)
 							)
 						)
 					)

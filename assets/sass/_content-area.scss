@@ -1,7 +1,6 @@
 #content-area {
 	overflow: auto;
 	width: 100%;
-	background: black;
 	min-height: 100vh;
 }
 
@@ -80,8 +79,9 @@
 			background: transparent;
 			font-size: 2rem;
 			border: none;
-			border-bottom: 1px solid $lightgrey;
+			border-bottom: 1px solid $darkgrey;
 			margin-bottom: 20px;
+			font-weight: 100;
 			color: $lightgrey;
 		}
 	}
@@ -90,7 +90,7 @@
 		margin-bottom: 20px;
 		
 		.results {
-			color: $lightgrey;
+			color: $darkgrey;
 			font-size: 0.8rem;
 			display: inline-block;
 		}
@@ -124,8 +124,7 @@
 		
 		
 		.listing {
-			background: #fff;
-			width: 33.33%;
+			background: #fff; 
 			border-radius: 5px;
 			-webkit-box-shadow: 0px 9px 54px -4px rgba(224,224,224,1);
 			-moz-box-shadow: 0px 9px 54px -4px rgba(224,224,224,1);
@@ -133,7 +132,7 @@
 		}
 		.listing-img {
 			color: white;
-			padding: 15px;
+			padding: 10px;
 			position: relative;
 			  background: url("https://i.ytimg.com/vi/J4rBDsimsmQ/maxresdefault.jpg") no-repeat center center; 
 			  -webkit-background-size: cover;
@@ -153,12 +152,12 @@
 				.details {
 					opacity: 1;
 				}
-				.address {
+				.Address {
 					opacity: 0;
 				}
 			}
 			
-			.address {
+			.Address {
 				position: absolute;
 				bottom: 20px;
 				opacity: 0;
@@ -168,7 +167,7 @@
 			.details {
 				transition: all 0.4s ease-in-out;
 				opacity: 0;
-				padding: 30px;
+				padding: 20px;
 				position: absolute;
 				top: 0;
 				left: 0;
@@ -199,9 +198,11 @@
 				  -o-background-size: cover;
 				  background-size: cover;
 				}
-				.user-deatils {
+				.user-details {
 					vertical-align: top;
 					display: inline-block;
+					width: 70%;
+					margin-left: 20px;
 					
 					.user-name {
 						font-weight: 300;
@@ -282,6 +283,7 @@
 	width: 25%;
 	display: inline-block;
 	vertical-align: top;
+	padding: 0 15px;
 }
 
 .col-md-9 {
