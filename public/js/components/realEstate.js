@@ -1,6 +1,61 @@
 webpackJsonp([0],{
 
-/***/ 101:
+/***/ 100:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+var listingsData = [{
+	address: '50-68 grand ave',
+	city: 'San Francisco',
+	state: 'CA',
+	rooms: '2',
+	price: 220000,
+	floorspace: 2000,
+	extras: ['elevator', 'gym'],
+	homeType: 'Apartment',
+	image: 'http://media.equityapartments.com/images/c_crop,x_0,y_0,w_1920,h_1080/c_fill,w_1920,h_1080/q_80/4206-28/the-kelvin-apartments-exterior.jpg'
+}, {
+	address: '50-68 grand ave',
+	city: 'little',
+	state: 'KS',
+	rooms: '3',
+	price: 220000,
+	floorspace: 3000,
+	extras: ['elevator', 'gym'],
+	homeType: 'Apartment',
+	image: 'http://cdn.home-designing.com/wp-content/uploads/2016/04/luxury-art-deco-apartment-interior.jpg'
+}, {
+	address: '50-68 grand ave',
+	city: 'Reno',
+	state: 'NV',
+	rooms: '4',
+	price: 620000,
+	floorspace: 4000,
+	extras: ['elevator', 'gym'],
+	homeType: 'Apartment',
+	image: 'https://upload.wikimedia.org/wikipedia/commons/1/1e/AIMCO_apartment_interior.jpg'
+}, {
+	address: '50-68 grand ave',
+	city: 'San Francisco',
+	state: 'CA',
+	rooms: '5',
+	price: 320000,
+	floorspace: 5000,
+	extras: ['elevator', 'gym'],
+	homeType: 'Apartment',
+	image: 'https://inhproperties.com/wp-content/uploads/2017/09/richard-2.jpg'
+}];
+
+exports.default = listingsData;
+
+/***/ }),
+
+/***/ 102:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28,6 +83,10 @@ var _Listings = __webpack_require__(99);
 
 var _Listings2 = _interopRequireDefault(_Listings);
 
+var _listingsData = __webpack_require__(100);
+
+var _listingsData2 = _interopRequireDefault(_listingsData);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -45,7 +104,8 @@ var App = function (_Component) {
     var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this));
 
     _this.state = {
-      name: 'Joe'
+      name: 'Joe',
+      listingsData: _listingsData2.default
     };
     return _this;
   }
@@ -53,6 +113,7 @@ var App = function (_Component) {
   _createClass(App, [{
     key: 'render',
     value: function render() {
+      console.log(this.state);
       return _react2.default.createElement(
         'div',
         null,
@@ -830,4 +891,4 @@ exports.default = Header;
 
 /***/ })
 
-},[101]);
+},[102]);
