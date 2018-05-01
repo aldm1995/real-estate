@@ -4,7 +4,7 @@ var listingsData = [
 		city: 'San Francisco',
 		state: 'CA',
 		rooms: '2',
-		price: 220000,
+		price: 920000,
 		floorspace: 2000,
 		extras: [
 			'elevator',
@@ -43,8 +43,8 @@ var listingsData = [
 	},
 	{
 		address: '50-68 grand ave',
-		city: 'San Francisco',
-		state: 'CA',
+		city: 'Houston',
+		state: 'TX',
 		rooms: '5',
 		price: 320000,
 		floorspace: 5000,
@@ -53,7 +53,7 @@ var listingsData = [
 			'gym'
 		],
 		homeType: 'Apartment',
-		image: 'https://inhproperties.com/wp-content/uploads/2017/09/richard-2.jpg'
+		image: 'http://bagsjar.com/wp-content/uploads/2017/07/apartments-for-rent-galleria-houston-tx-images-home-design-contemporary-under-apartments-for-rent-galleria-houston-tx-design-tips.jpg'
 	},
 ]
 
