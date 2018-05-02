@@ -24,7 +24,7 @@ var listingsData = [
 			'elevator',
 			'gym'
 		],
-		homeType: 'Apartment',
+		homeType: 'Condo',
 		image: 'http://cdn.home-designing.com/wp-content/uploads/2016/04/luxury-art-deco-apartment-interior.jpg'
 	},
 	{
@@ -38,7 +38,7 @@ var listingsData = [
 			'elevator',
 			'gym'
 		],
-		homeType: 'Apartment',
+		homeType: 'Single Home',
 		image: 'https://upload.wikimedia.org/wikipedia/commons/1/1e/AIMCO_apartment_interior.jpg'
 	},
 	{
@@ -52,7 +52,7 @@ var listingsData = [
 			'elevator',
 			'gym'
 		],
-		homeType: 'Apartment',
+		homeType: 'Room',
 		image: 'http://bagsjar.com/wp-content/uploads/2017/07/apartments-for-rent-galleria-houston-tx-images-home-design-contemporary-under-apartments-for-rent-galleria-houston-tx-design-tips.jpg'
 	},
 ]

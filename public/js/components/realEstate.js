@@ -27,7 +27,7 @@ var listingsData = [{
 	price: 220000,
 	floorspace: 3000,
 	extras: ['elevator', 'gym'],
-	homeType: 'Apartment',
+	homeType: 'Condo',
 	image: 'http://cdn.home-designing.com/wp-content/uploads/2016/04/luxury-art-deco-apartment-interior.jpg'
 }, {
 	address: '50-68 grand ave',
@@ -37,7 +37,7 @@ var listingsData = [{
 	price: 620000,
 	floorspace: 4000,
 	extras: ['elevator', 'gym'],
-	homeType: 'Apartment',
+	homeType: 'Single Home',
 	image: 'https://upload.wikimedia.org/wikipedia/commons/1/1e/AIMCO_apartment_interior.jpg'
 }, {
 	address: '50-68 grand ave',
@@ -47,7 +47,7 @@ var listingsData = [{
 	price: 320000,
 	floorspace: 5000,
 	extras: ['elevator', 'gym'],
-	homeType: 'Apartment',
+	homeType: 'Room',
 	image: 'http://bagsjar.com/wp-content/uploads/2017/07/apartments-for-rent-galleria-houston-tx-images-home-design-contemporary-under-apartments-for-rent-galleria-houston-tx-design-tips.jpg'
 }];
 
@@ -108,6 +108,9 @@ var App = function (_Component) {
 		_this.state = {
 			name: 'Joe',
 			listingsData: _listingsData2.default,
+			city: 'All',
+			homeType: 'All',
+			bedrooms: '0',
 			min_price: 0,
 			max_price: 10000000,
 			min_floor_space: 0,
@@ -143,8 +146,20 @@ var App = function (_Component) {
 			var _this3 = this;
 
 			var newData = this.state.listingsData.filter(function (item) {
-				return item.price >= _this3.state.min_price && item.price <= _this3.state.max_price && item.floorspace >= _this3.state.min_floor_space && item.floorspace <= _this3.state.max_floor_space;
+				return item.price >= _this3.state.min_price && item.price <= _this3.state.max_price && item.floorspace >= _this3.state.min_floor_space && item.floorspace <= _this3.state.max_floor_space && item.rooms >= _this3.state.bedrooms;
 			});
+
+			if (this.state.city != "All") {
+				newData = newData.filter(function (item) {
+					return item.city == _this3.state.city;
+				});
+			}
+
+			if (this.state.homeType != "All") {
+				newData = newData.filter(function (item) {
+					return item.homeType == _this3.state.homeType;
+				});
+			}
 
 			this.setState({
 				filteredData: newData
@@ -229,8 +244,18 @@ var Filter = function (_Component) {
 						'Filter'
 					),
 					_react2.default.createElement(
+						'label',
+						{ htmlFor: 'city' },
+						'City'
+					),
+					_react2.default.createElement(
 						'select',
-						{ name: 'neighbourhood', className: 'filters neighbourhood', onChange: this.props.change },
+						{ name: 'city', className: 'filters city', onChange: this.props.change },
+						_react2.default.createElement(
+							'option',
+							{ value: 'All' },
+							'All'
+						),
 						_react2.default.createElement(
 							'option',
 							{ value: 'San Leandro' },
@@ -248,8 +273,18 @@ var Filter = function (_Component) {
 						)
 					),
 					_react2.default.createElement(
+						'label',
+						{ htmlFor: 'city' },
+						'Home Type'
+					),
+					_react2.default.createElement(
 						'select',
-						{ name: 'housetype', className: 'filters housetype', onChange: this.props.change },
+						{ name: 'homeType', className: 'filters homeType', onChange: this.props.change },
+						_react2.default.createElement(
+							'option',
+							{ value: 'All' },
+							'All Homes'
+						),
 						_react2.default.createElement(
 							'option',
 							{ value: 'Ranch' },
@@ -272,27 +307,37 @@ var Filter = function (_Component) {
 						)
 					),
 					_react2.default.createElement(
+						'label',
+						{ htmlFor: 'city' },
+						'Bedrooms'
+					),
+					_react2.default.createElement(
 						'select',
 						{ name: 'bedrooms', className: 'filters bedrooms', onChange: this.props.change },
 						_react2.default.createElement(
 							'option',
+							{ value: '0' },
+							'0+ BR'
+						),
+						_react2.default.createElement(
+							'option',
 							{ value: '1' },
-							'1 BR'
+							'1+ BR'
 						),
 						_react2.default.createElement(
 							'option',
 							{ value: '2' },
-							'2 BR'
+							'2+ BR'
 						),
 						_react2.default.createElement(
 							'option',
 							{ value: '3' },
-							'3 BR'
+							'3+ BR'
 						),
 						_react2.default.createElement(
 							'option',
 							{ value: '4' },
-							'4 BR'
+							'4+ BR'
 						)
 					),
 					_react2.default.createElement(
