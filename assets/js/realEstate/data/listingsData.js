@@ -15,7 +15,7 @@ var listingsData = [
 	},
 	{
 		address: '50-68 grand ave',
-		city: 'little',
+		city: 'Topeka',
 		state: 'KS',
 		rooms: '3',
 		price: 220000,
