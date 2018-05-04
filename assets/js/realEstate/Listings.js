@@ -143,7 +143,7 @@ loopListings () {
   render () {
     return (<section id="listings">
 		<section className="search-area">
-			<input type="text" name="search" placeholder="Search Here" />	
+			<input type="text" name="search" placeholder="Search Here" onChange={this.props.change} />	
 		</section>
 		 <section className="sortby-area">
 			<div className="results">390 results found</div>

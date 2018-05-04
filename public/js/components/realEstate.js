@@ -124,7 +124,8 @@ var App = function (_Component) {
 			filteredData: _listingsData2.default,
 			populateFormsData: '',
 			sortby: 'price-dsc',
-			view: 'long'
+			view: 'long',
+			search: ''
 		};
 
 		_this.change = _this.change.bind(_this);
@@ -196,6 +197,18 @@ var App = function (_Component) {
 			if (this.state.sortby == 'price-asc') {
 				newData = newData.sort(function (a, b) {
 					return b.price - a.price;
+				});
+			}
+
+			if (this.state.search != '') {
+				newData = newData.filter(function (item) {
+					var city = item.city.toLowerCase();
+					var searchText = _this3.state.search.toLowerCase();
+					var n = city.match(searchText);
+
+					if (n != null) {
+						return true;
+					}
 				});
 			}
 
@@ -948,7 +961,7 @@ var Header = function (_Component) {
 				_react2.default.createElement(
 					'section',
 					{ className: 'search-area' },
-					_react2.default.createElement('input', { type: 'text', name: 'search', placeholder: 'Search Here' })
+					_react2.default.createElement('input', { type: 'text', name: 'search', placeholder: 'Search Here', onChange: this.props.change })
 				),
 				_react2.default.createElement(
 					'section',
@@ -979,7 +992,7 @@ var Header = function (_Component) {
 							'div',
 							{ className: 'view' },
 							_react2.default.createElement('i', { className: 'fas fa-th-list', onClick: this.props.changeView.bind(null, "long") }),
-							_react2.default.createElement('i', { className: 'fas fa-th', onClick: this.props.changeView.bind(null, "long") })
+							_react2.default.createElement('i', { className: 'fas fa-th', onClick: this.props.changeView.bind(null, "box") })
 						)
 					)
 				),

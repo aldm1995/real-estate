@@ -25,7 +25,8 @@ class App extends Component {
 		filteredData : listingsData,
 		populateFormsData: '',
 		sortby: 'price-dsc',
-		view: 'long'
+		view: 'long',
+		search: ''
     }
 	  
 	  this.change = this.change.bind(this)
@@ -86,6 +87,19 @@ change(event){
 	   if(this.state.sortby == 'price-asc') {
 		  newData = newData.sort((a,b) => {
 			  return b.price - a.price
+		  })
+	  }
+	  
+	  if(this.state.search != '') {
+		  newData = newData.filter ((item) => {
+			 var city = item.city.toLowerCase()
+			 var searchText = this.state.search.toLowerCase()
+			 var n = city.match(searchText)
+			 
+			 if(n != null) {
+				 return true
+			 }
+			  
 		  })
 	  }
 	  
