@@ -124,7 +124,7 @@ var App = function (_Component) {
 			filteredData: _listingsData2.default,
 			populateFormsData: '',
 			sortby: 'price-dsc',
-			view: 'long',
+			view: 'box',
 			search: ''
 		};
 
@@ -705,7 +705,8 @@ var Header = function (_Component) {
 												_react2.default.createElement(
 													'span',
 													null,
-													'1000 ft\xB2'
+													listing.floorspace,
+													' ft\xB2'
 												)
 											),
 											_react2.default.createElement(
@@ -715,7 +716,7 @@ var Header = function (_Component) {
 												_react2.default.createElement(
 													'span',
 													null,
-													listing.bedrooms,
+													listing.rooms,
 													' bedrooms'
 												)
 											)
@@ -805,7 +806,8 @@ var Header = function (_Component) {
 												_react2.default.createElement(
 													'span',
 													null,
-													'1000 ft\xB2'
+													listing.floorspace,
+													' ft\xB2'
 												)
 											),
 											_react2.default.createElement(
@@ -905,7 +907,8 @@ var Header = function (_Component) {
 											_react2.default.createElement(
 												'span',
 												null,
-												'1000 ft\xB2'
+												listing.floorspace,
+												' ft\xB2'
 											)
 										),
 										_react2.default.createElement(
@@ -969,7 +972,8 @@ var Header = function (_Component) {
 					_react2.default.createElement(
 						'div',
 						{ className: 'results' },
-						'390 results found'
+						this.props.globalState.filteredData.length,
+						' results found'
 					),
 					_react2.default.createElement(
 						'div',
@@ -991,56 +995,64 @@ var Header = function (_Component) {
 						_react2.default.createElement(
 							'div',
 							{ className: 'view' },
-							_react2.default.createElement('i', { className: 'fas fa-th-list', onClick: this.props.changeView.bind(null, "long") }),
-							_react2.default.createElement('i', { className: 'fas fa-th', onClick: this.props.changeView.bind(null, "box") })
+							_react2.default.createElement('i', { className: 'fas fa-th-list', onClick: this.props.changeView.bind(null, "box") }),
+							_react2.default.createElement('i', { className: 'fas fa-th', onClick: this.props.changeView.bind(null, "long") })
 						)
 					)
 				),
 				_react2.default.createElement(
 					'section',
 					{ className: 'listings-results' },
-					this.loopListings()
+					_react2.default.createElement(
+						'div',
+						{ className: 'row' },
+						this.loopListings()
+					)
 				),
 				_react2.default.createElement(
 					'section',
 					{ id: 'pagination' },
 					_react2.default.createElement(
-						'ul',
-						{ className: 'pages' },
+						'div',
+						{ className: 'row' },
 						_react2.default.createElement(
-							'li',
-							null,
-							'Prev'
-						),
-						_react2.default.createElement(
-							'li',
-							{ className: 'active' },
-							'1'
-						),
-						_react2.default.createElement(
-							'li',
-							null,
-							'2'
-						),
-						_react2.default.createElement(
-							'li',
-							null,
-							'3'
-						),
-						_react2.default.createElement(
-							'li',
-							null,
-							'4'
-						),
-						_react2.default.createElement(
-							'li',
-							null,
-							'5'
-						),
-						_react2.default.createElement(
-							'li',
-							null,
-							'Next'
+							'ul',
+							{ className: 'pages' },
+							_react2.default.createElement(
+								'li',
+								null,
+								'Prev'
+							),
+							_react2.default.createElement(
+								'li',
+								{ className: 'active' },
+								'1'
+							),
+							_react2.default.createElement(
+								'li',
+								null,
+								'2'
+							),
+							_react2.default.createElement(
+								'li',
+								null,
+								'3'
+							),
+							_react2.default.createElement(
+								'li',
+								null,
+								'4'
+							),
+							_react2.default.createElement(
+								'li',
+								null,
+								'5'
+							),
+							_react2.default.createElement(
+								'li',
+								null,
+								'Next'
+							)
 						)
 					)
 				)

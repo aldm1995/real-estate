@@ -36,12 +36,12 @@ loopListings () {
 								<div className="listing-details">
 									<div className="floor-space">
 										<i className="far fa-square"></i>
-										<span>1000 ft&sup2;</span>
+										<span>{listing.floorspace} ft&sup2;</span>
 									</div>
 
 									<div className="bedrooms">
 										<i className="fas fa-bed"></i>
-										<span>{listing.bedrooms} bedrooms</span>
+										<span>{listing.rooms} bedrooms</span>
 									</div>
 								</div>
 
@@ -76,7 +76,7 @@ loopListings () {
 								<div className="listing-details">
 									<div className="floor-space">
 										<i className="far fa-square"></i>
-										<span>1000 ft&sup2;</span>
+										<span>{listing.floorspace} ft&sup2;</span>
 									</div>
 
 									<div className="bedrooms">
@@ -117,7 +117,7 @@ loopListings () {
 								<div className="listing-details">
 									<div className="floor-space">
 										<i className="far fa-square"></i>
-										<span>1000 ft&sup2;</span>
+										<span>{listing.floorspace} ft&sup2;</span>
 									</div>
 
 									<div className="bedrooms">
@@ -146,34 +146,36 @@ loopListings () {
 			<input type="text" name="search" placeholder="Search Here" onChange={this.props.change} />	
 		</section>
 		 <section className="sortby-area">
-			<div className="results">390 results found</div>
+			<div className="results">{this.props.globalState.filteredData.length} results found</div>
 			<div className="sort-options">
 				<select name="sortby" className="sortby" onChange={this.props.change} >
 					<option value="price-dsc">Lowest Price</option>
 					<option value="price-asc">Highest Price</option>
 				</select>
 				<div className="view">
-					<i className="fas fa-th-list" onClick={this.props.changeView.bind(null, "long")}></i>
-					<i className="fas fa-th" onClick={this.props.changeView.bind(null, "box")}></i>
+					<i className="fas fa-th-list" onClick={this.props.changeView.bind(null, "box")}></i>
+					<i className="fas fa-th" onClick={this.props.changeView.bind(null, "long")}></i>
 				</div>
 			</div>
 		</section>
 
 		<section className="listings-results">
-			
+		<div className="row">
 		{this.loopListings()}
-			
+		</div>
 		</section>
 		<section id="pagination">
-			<ul className="pages">
-				<li>Prev</li>
-				<li className="active">1</li>
-				<li>2</li>
-				<li>3</li>
-				<li>4</li>
-				<li>5</li>
-				<li>Next</li>
-			</ul>
+			<div className="row">
+				<ul className="pages">
+					<li>Prev</li>
+					<li className="active">1</li>
+					<li>2</li>
+					<li>3</li>
+					<li>4</li>
+					<li>5</li>
+					<li>Next</li>
+				</ul>
+			</div>
 		</section>
 			
 	</section>)

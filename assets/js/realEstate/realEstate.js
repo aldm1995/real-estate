@@ -25,7 +25,7 @@ class App extends Component {
 		filteredData : listingsData,
 		populateFormsData: '',
 		sortby: 'price-dsc',
-		view: 'long',
+		view: 'box',
 		search: ''
     }
 	  
