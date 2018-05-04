@@ -17,6 +17,89 @@ loopListings () {
 	}
 	
 	return listingsData.map((listing, index) => {
+		if (this.props.globalState.view == 'box') {
+			// this is the box view
+			return (<div className="col-md-3" key={index}>
+				<div className="listing">
+					<div className="listing-img" style={{background: `url("${listing.image}") no-repeat center center`}}>
+						<span className="Address">{listing.address}</span>
+						<div className="details">
+							<div className="col-md-3">
+								<div className="user-img"> </div>
+							</div>
+
+							<div className="col-md-9">
+								<div className="user-details">
+									<span className="user-name">Andrew Mukhtar</span>
+									<span className="post-date">05/05/2018</span>
+								</div>
+								<div className="listing-details">
+									<div className="floor-space">
+										<i className="far fa-square"></i>
+										<span>1000 ft&sup2;</span>
+									</div>
+
+									<div className="bedrooms">
+										<i className="fas fa-bed"></i>
+										<span>{listing.bedrooms} bedrooms</span>
+									</div>
+								</div>
+
+								<div className="view-btn">
+									View Listing
+								</div>
+							</div>
+						</div>
+					</div>
+					<div className="bottom-info">
+						<span className="price">${listing.price}</span>
+						<span className="location"><i className="fas fa-map-marker"></i> {listing.city}, {listing.state} </span>
+					</div>
+				</div>
+			</div>)
+		} else {
+			// this is the long view
+			return (<div className="col-md-12 col-lg-6" key={index}>
+				<div className="listing">
+					<div className="listing-img" style={{background: `url("${listing.image}") no-repeat center center`}}>
+						<span className="Address">{listing.address}</span>
+						<div className="details">
+							<div className="col-md-3">
+								<div className="user-img"> </div>
+							</div>
+
+							<div className="col-md-9">
+								<div className="user-details">
+									<span className="user-name">Andrew Mukhtar</span>
+									<span className="post-date">05/05/2018</span>
+								</div>
+								<div className="listing-details">
+									<div className="floor-space">
+										<i className="far fa-square"></i>
+										<span>1000 ft&sup2;</span>
+									</div>
+
+									<div className="bedrooms">
+										<i className="fas fa-bed"></i>
+										<span>{listing.bedrooms} bedrooms</span>
+									</div>
+								</div>
+
+								<div className="view-btn">
+									View Listing
+								</div>
+							</div>
+						</div>
+					</div>
+					<div className="bottom-info">
+						<span className="price">${listing.price}</span>
+						<span className="location"><i className="fas fa-map-marker"></i> {listing.city}, {listing.state} </span>
+					</div>
+				</div>
+			</div>)		
+		}
+		
+		
 		return (<div className="col-md-3" key={index}>
 				<div className="listing">
 					<div className="listing-img" style={{background: `url("${listing.image}") no-repeat center center`}}>
@@ -70,8 +153,8 @@ loopListings () {
 					<option value="price-asc">Highest Price</option>
 				</select>
 				<div className="view">
-					<i className="fas fa-th-list"></i>
-					<i className="fas fa-th"></i>
+					<i className="fas fa-th-list" onClick={this.props.changeView.bind(null, "long")}></i>
+					<i className="fas fa-th" onClick={this.props.changeView.bind(null, "box")}></i>
 				</div>
 			</div>
 		</section>
